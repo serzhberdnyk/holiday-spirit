@@ -1,9 +1,29 @@
 # Holiday Spirit
 
-Этот репозиторий пока содержит только восстановленную историю изменений проекта. Актуальный исходный код ещё не перенесён; сборка и автоматическая синхронизация здесь не настроены.
+Static RU/EN website for villa management, renovation and long-term rental enquiries in Phuket.
 
-[История изменений](CHANGELOG.md) восстановлена 25 октября 2026 года из проверенных материалов. Подтверждённые публикации, подготовленные изменения и пробелы обозначены отдельно. Исторические даты внутри документа не являются датами Git-коммитов этого репозитория.
+This source snapshot matches the HTML published as Holiday Spirit version 4. All HTML, CSS, JavaScript and visual assets are contained in `index.html`; no dependency installation or build step is required.
 
-Логическая версия сайта: 0.8.0. Технический ориентир: Sites v4. Карточки витрины являются стилевыми ориентирами, а не подтверждёнными предложениями с ценами.
+## Run locally
 
-Перенос исходников будет отдельным этапом после проверки точного source snapshot, состава файлов, секретов, прав на assets и независимого ревью. Эта публикация документов не меняет работающий сайт.
+Open `index.html` in a browser, or serve this directory:
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Then open `http://127.0.0.1:8000`.
+
+## Behaviour
+
+- RU/EN language switching; the language preference is stored only in the browser.
+- Eight property-style selection guides, not verified property listings. No live prices or availability are asserted.
+- Public WhatsApp links prepare a generic enquiry; visitors decide whether to send it.
+- No backend, booking, payment, analytics or automatic message sending.
+- The existing `noindex, nofollow` directive is preserved.
+
+For generic static hosting, serve `index.html` directly. Provider-specific deployment metadata is intentionally omitted.
+
+## Visual assets
+
+The photographs and brand artwork are embedded in the existing website source. Their presence here does not grant a separate licence to reuse them.
